@@ -16,6 +16,7 @@ $('#play').click(function () {
 });
 
 
+
 var retina = window.devicePixelRatio,
 
     // Math shorthands
@@ -67,11 +68,11 @@ var retina = window.devicePixelRatio,
 document.addEventListener("DOMContentLoaded", function () {
     var speed = 50,
         duration = (1.0 / speed),
-        confettiRibbonCount = 10,
-        ribbonPaperCount = 15,
-        ribbonPaperDist = 8.0,
-        ribbonPaperThick = 8.0,
-        confettiPaperCount = 10,
+        confettiRibbonCount = 500,
+        ribbonPaperCount = 30,
+        ribbonPaperDist = 10.0,
+        ribbonPaperThick = 10.0,
+        confettiPaperCount = 20,
         DEG_TO_RAD = PI / 180,
         RAD_TO_DEG = 180 / PI,
         colors = [
@@ -181,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function ConfettiPaper(_x, _y) {
         this.pos = new Vector2(_x, _y);
-        this.rotationSpeed = (random() * 600 + 800);
+        this.rotationSpeed = (random() * 800 + 900);
         this.angle = DEG_TO_RAD * random() * 360;
         this.rotation = DEG_TO_RAD * random() * 360;
         this.cosA = 1.0;
