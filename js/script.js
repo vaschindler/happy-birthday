@@ -1,7 +1,4 @@
-var sf = new Snowflakes({
-    color: "#ffd700",
-    minSize: 20
-});
+
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("name");
@@ -11,10 +8,11 @@ if (c != null) {
     document.getElementById("nae").innerHTML = c;
 }
 $(".main").fadeOut(1);
+$(".present-page").fadeOut(1);
+$(".htc").fadeOut(1);
 $('#play').click(function () {
     $(".loader").fadeOut(1500);
     $(".main").fadeIn("slow");
-    sf.destroy();
     $('.balloon-border').animate({
         top: -500
     }, 8000);
@@ -22,11 +20,16 @@ $('#play').click(function () {
     audio.play();
 
 });
-var typed = new Typed("#typed", {
-    stringsElement: '#typed-strings',
-    typeSpeed: 30,
-    backSpeed: 10,
-    loop: true
+
+$('#button-click-me').click(function () {
+    $(".main").fadeOut(500);
+    $(".present-page").fadeIn("slow");
+});
+
+$('#present').click(function () {
+    $(".gift").fadeOut(5000).promise().done(function(){
+        $(".htc").fadeIn(1000);
+    });
 });
 var retina = window.devicePixelRatio,
 

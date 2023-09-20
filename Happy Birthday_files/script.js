@@ -1,7 +1,4 @@
-var sf = new Snowflakes({
-    color: "#ffd700",
-    minSize: 20
-});
+
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("name");
@@ -12,20 +9,13 @@ if (c != null) {
 }
 $('#play').click(function () {
     $(".loader").fadeOut("slow");
-    sf.destroy();
     $('.balloon-border').animate({
         top: -500
     }, 8000);
-    var audio = $('.song')[0];
-    audio.play();
 
 });
-var typed = new Typed("#typed", {
-    stringsElement: '#typed-strings',
-    typeSpeed: 30,
-    backSpeed: 10,
-    loop: true
-});
+
+
 var retina = window.devicePixelRatio,
 
     // Math shorthands
