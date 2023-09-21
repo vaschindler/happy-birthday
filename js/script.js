@@ -28,14 +28,14 @@ $('#play').click(function () {
 });
 
 $('#button-click-me').click(function () {
-    $(".main").fadeOut(500);
-    $(".present-page").fadeIn("slow");
+    $(".main").fadeOut(1);
+    $(".present-page").fadeIn(1000);
 });
 
 $('#present').click(function () {
     $(".gift").fadeOut(5000).promise().done(function(){
-        $(".htc").fadeIn(5000);
-        $(".present-content").fadeIn(5000);
+        $(".htc").fadeIn(8000);
+        $(".present-content").fadeIn(8000);
     });
 });
 var retina = window.devicePixelRatio,
@@ -88,11 +88,11 @@ var retina = window.devicePixelRatio,
 document.getElementById("play").addEventListener("click", function () {
     var speed = 50,
         duration = (1.0 / speed),
-        confettiRibbonCount = 10,
+        confettiRibbonCount = 20,
         ribbonPaperCount = 15,
         ribbonPaperDist = 8.0,
         ribbonPaperThick = 8.0,
-        confettiPaperCount = 10,
+        confettiPaperCount = 20,
         DEG_TO_RAD = PI / 180,
         RAD_TO_DEG = 180 / PI,
         colors = [
