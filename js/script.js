@@ -76,8 +76,7 @@ var retina = window.devicePixelRatio,
         cancel.call(w, id);
     };
 }(window));
-
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("play").addEventListener("click", function () {
     var speed = 50,
         duration = (1.0 / speed),
         confettiRibbonCount = 10,
