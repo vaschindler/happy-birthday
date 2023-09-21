@@ -7,9 +7,17 @@ if (c != null) {
     document.getElementById("name").innerHTML = c;
     document.getElementById("nae").innerHTML = c;
 }
+let notChromeAgent = navigator.userAgent.indexOf("Chrome") <= -1;
+console.log(notChromeAgent)
+if (notChromeAgent) {
+    window.alert("This website is not supported on Firefox. Please use Chrome. Sorry :D")
+}
+
 $(".main").fadeOut(1);
 $(".present-page").fadeOut(1);
 $(".htc").fadeOut(1);
+$(".present-content").fadeOut(1);
+
 $('#play').click(function () {
     $(".loader").fadeOut(1500);
     $(".main").fadeIn("slow");
@@ -26,7 +34,8 @@ $('#button-click-me').click(function () {
 
 $('#present').click(function () {
     $(".gift").fadeOut(5000).promise().done(function(){
-        $(".htc").fadeIn(1000);
+        $(".htc").fadeIn(5000);
+        $(".present-content").fadeIn(5000);
     });
 });
 var retina = window.devicePixelRatio,

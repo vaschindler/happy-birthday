@@ -61,6 +61,9 @@
 body {
     background-color: #FFDAB9;
 }
+*:focus {
+    outline: none;
+}
 
 img {
     width: 100%;
@@ -94,6 +97,12 @@ img {
     top: 0;
     height: 100%;
     width: 100%;
+    z-index: -1;
+}
+.gift {
+
+    height: auto;
+    width: 600px;
 }
 
 @keyframes spin {
@@ -118,6 +127,17 @@ img {
     font-size: 25px;
     color: #C4515C;
 
+}
+
+.table-content {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #C4515C;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+.level{
+    z-index: 10000;
 }
 
 .cake {
